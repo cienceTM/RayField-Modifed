@@ -530,9 +530,9 @@ function RayfieldLibrary:Notify(NotificationSettings)
 				NewAction.MouseButton1Click:Connect(function()
 					local Success, Response = pcall(Action.Callback)
 					if not Success then
-						print("Rayfield | Action: "..Action.Name.." Callback Error " ..tostring(Response))
+						warn("Rayfield | Action: "..Action.Name.." Callback Error " ..tostring(Response))
 					end
-					ActionCompleted = true
+					ActionCompleted = false
 				end)
 			end
 		end
